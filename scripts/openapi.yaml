@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Guestbook API
+  version: 1.0.0
+
+paths:
+  /metrics:
+    get:
+      summary: Get messages
+      operationId: getMetrics
+      responses:
+        '200':
+          description: OK
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <your-function-id>
+        service_account_id: <your-service-account-id>
+
+    post:
+      summary: Post a message
+      operationId: postMetrics
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+      responses:
+        '200':
+          description: OK
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: <your-function-id>
+        service_account_id: <your-service-account-id>

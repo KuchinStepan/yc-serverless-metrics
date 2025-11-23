@@ -1,0 +1,8 @@
+{
+  "cloud_id": "123",
+  "db_name": "metrics-db",
+  "folder_id": "123",
+  "function_name": "metrics-function",
+  "gateway_name": "for-serverless-metrics",
+  "service_account_name": "yc-metrics"
+}
