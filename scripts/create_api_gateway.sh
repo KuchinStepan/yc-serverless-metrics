@@ -54,7 +54,7 @@ yc serverless api-gateway create \
   --description "for serverless metrics"
 
 
-DOMAIN="https://$(yc serverless api-gateway get for-serverless-metrics --format json | jq -r '.domain')/metrics"
+DOMAIN="https://$(yc serverless api-gateway get $GATEWAY_NAME --format json | jq -r '.domain')/metrics"
 
 echo "Api-gateway created!"
 echo $DOMAIN
